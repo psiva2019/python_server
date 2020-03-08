@@ -1,4 +1,4 @@
-
+@echo off
 set "VIRTUAL_ENV=%CD%"
 
 if not defined PROMPT (
@@ -28,6 +28,6 @@ if defined _OLD_VIRTUAL_PATH (
     set "_OLD_VIRTUAL_PATH=%PATH%"
 )
 
-set "PATH=%VIRTUAL_ENV%\Scripts;%PATH%"
+set "PATH=%VIRTUAL_ENV%\env\Scripts;%PATH%"
 
 :END
