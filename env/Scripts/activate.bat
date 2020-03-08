@@ -1,7 +1,8 @@
-@echo off
+
 set "VIRTUAL_ENV=%CD%"
 
 if not defined PROMPT (
+    
     set "PROMPT=$P$G"
 )
 
