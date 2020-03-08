@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\Users\Administrator\Desktop\python\WebPage\env"
+set "VIRTUAL_ENV=%CD%"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"

@@ -10,6 +10,11 @@ app = Flask(__name__)
 
 res = requests.get('https://news.ycombinator.com/news')
 
+#res.proxies = {
+#    "http": "10.142.125.36:8080",
+#    "https": "10.142.125.36:8080"
+#}
+
 soup = BeautifulSoup(res.text, "html.parser")
 links = soup.select(".storylink")
 subtext = soup.select(".subtext")
