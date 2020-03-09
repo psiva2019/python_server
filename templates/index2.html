@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block title %}
+"First Flask App"
+{% endblock %}
+{% block content %}
+<table class="table table-striped" id="users">
+    <thead>
+     {%- for column in columns %}
+        <th>{{ column }}</th>
+     {%- endfor %}
+    </thead>
+   
+    <tbody>
+    {%- for row in items %}
+       <tr>
+       {%- for column in columns %}
+           {% if row[column]['link'] %}
+               <td><a href="{{ row[column]['link'] }}">{{ row[column]['text'] }}</a></td>
+           {% else %}
+               <td>{{ row[column] }}</td>
+           {% endif %}
+       {%- endfor %}
+       </tr>
+    {%- endfor %}
+    </tbody>
+    </table>
+{% endblock %}
