@@ -14,8 +14,8 @@ AUTHORIZATION_SCOPE ='openid email profile'
 
 AUTH_REDIRECT_URI = "http://localhost:5000/auth"
 BASE_URI = "http://localhost:5000/"
-CLIENT_ID = "488683241472-msuot9subi0ggea0eskpd8fc769farv0.apps.googleusercontent.com"
-CLIENT_SECRET = "k3dUz4bihsMs9m_jnPOjx9Ug"
+CLIENT_ID = "488683241472-n3imt475t4rm74od584lodihmmjjht3t.apps.googleusercontent.com"
+CLIENT_SECRET = "G-NWAZcbhVeHjZ9UB-Qz5B3V"
 
 AUTH_TOKEN_KEY = 'auth_token'
 AUTH_STATE_KEY = 'auth_state'
@@ -72,7 +72,7 @@ def login():
 
     return flask.redirect(uri, code=302)
 
-@app.route('/google/auth')
+@app.route('/auth')
 @no_cache
 def google_auth_redirect():
     req_state = flask.request.args.get('state', default=None, type=None)
