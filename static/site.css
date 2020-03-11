@@ -1,18 +1,10 @@
-* {box-sizing: border-box;}
-
-.body-content {
-    padding: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 .navbar {
-    background-color: lightslategray;
-    font-size: 1em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
-    padding: 8px 5px 8px 5px;
-    overflow: hidden;
-
+  background-color: lightslategray;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  padding: 8px 5px 8px 5px;
+  overflow: hidden;
 }
 
 .navbar a {
@@ -20,7 +12,7 @@
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 7px 8px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -34,52 +26,49 @@
   background-color: #2196F3;
   color: white;
 }
+.navbar .login-container button {
+  float: right;
+  vertical-align: middle;
+  margin-top: 8px;
+  margin-right: 16px;
+  background-color: #555;
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
 
 .navbar .login-container {
   float: right;
-}
-
-.navbar .login-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background-color: #555;
-  color: white;
+  color: black;
+  text-align: center;
+  text-decoration: none;
   font-size: 17px;
-  border: none;
-  cursor: pointer;
 }
 
-
-.navbar .login-container logname {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background-color: #555;
-  color: white;
+.navbar .login-container .nav-img{
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
   font-size: 17px;
-  border: none;
-  cursor: pointer;
 }
+
+.navbar .login-container .avatar{
+  float: left;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 .navbar .login-container button:hover {
   background-color: green;
 }
 
-@media screen and (max-width: 600px) {
-  .navbar .login-container {
-    float: none;
-  }
-  .navbar a, .navbar input[type=text], .navbar .login-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  .navbar input[type=text] {
-    border: 1px solid #ccc;  
-  }
+.body-content {
+  padding: 3px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

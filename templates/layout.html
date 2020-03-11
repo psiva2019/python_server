@@ -3,23 +3,30 @@
     <head>
         <meta charset="utf-8" />
         <title>{% block title %}{% endblock %}</title>
-            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+          <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
 <!--        <link rel="stylesheet" type="text/css" href="../static/site.css" />-->
-
+    <script language="java">
+    </script>
     </head>
 
     <body>
+        
         <div class="navbar">
             <a href="{{ url_for('home') }}" class="navbar-brand">Home</a>
             <a href="{{ url_for('about') }}" class="navbar-item">About</a>
             <a href="{{ url_for('contact') }}" class="navbar-item">Contact</a>
+      
             <div class="login-container">
-                <div class "logname">
-                    {% block login %}
-                    {% endblock %}
-                <div>
-            </div>            
+                  {% if message=="yes" %} 
+                    <img alt="Avatar" class="avatar" src="{{ usrimg }}"/>
+                    <label class="nav-img">{{ userin }} </label>
+                    <button type="button" onclick="window.location.href='{{ url_for( 'google_auth.logout') }}';">Logout</button>
+                {% else %}    
+                    <button type="button" onclick="window.location.href='{{ url_for( 'google_auth.login') }}';">Login</button>
+                {% endif %}                   
+            </div>
         </div>
+        
         <div class="body-content">
 
             {% block content %}

@@ -10,8 +10,6 @@ import googleapiclient.discovery
 
 import google_auth
 from flask.templating import render_template
-from werkzeug.utils import redirect
-from flask.helpers import url_for
 
 
 app = Flask(__name__)
@@ -26,7 +24,8 @@ def home():
         user_info = google_auth.get_user_info()
         r = json.dumps(user_info)
         loaded_r = json.loads(r)
-        return render_template("index.html",message='yes',userin=loaded_r['email'])
+        print(r)
+        return render_template("index.html",message='yes',usrimg=loaded_r['picture'],userin=loaded_r['name'])
 
     return render_template("index.html",message='You are not currently logged in.',userin=None)
 
